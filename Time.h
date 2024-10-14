@@ -1,0 +1,28 @@
+#ifndef time___h
+#define time___h
+
+#include <stdio.h>
+#include <time.h>
+#include "antheaderPlusPlus.h"
+void Date()
+{
+	time_t t = time(NULL);
+	struct tm tm = *localtime(&t);
+	gotoxy(15,3);
+	printf("Date : %02d-%02d-%d",tm.tm_mon + 1, tm.tm_mday, tm.tm_year + 1900);
+}
+void Time()
+{
+	time_t t = time(NULL);
+	struct tm tm = *localtime(&t);
+	gotoxy(15,4);
+	printf("Time : %02d:%02d:%02d  ",tm.tm_hour, tm.tm_min, tm.tm_sec);
+}
+void Current()
+{
+	foreColor(7);
+	Date();
+	Time();
+}
+
+#endif

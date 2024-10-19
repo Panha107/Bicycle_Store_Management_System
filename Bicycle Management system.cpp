@@ -13,9 +13,9 @@ void MainMeNu();
 int main()
 {
 	SetConsoleTitle("BICYCLE MANAGEMENT SYSTEM");
-	//Login();
+	Login();
 	//cout<<"\n\t size of ProductManagement = "<<sizeof(ProductManagement)<<" byte";
-	MainMeNu();
+	//MainMeNu();
 //	getch();
 	return 0;
 }
